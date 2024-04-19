@@ -11,3 +11,4 @@ const Color lightGreen = Color(0xff2EB200);
 final Color darkGreen = const Color(0xff2EB200).withOpacity(0.53);
 const Color lighterGreen = Color(0xff06FFA5);
 const Color lightRed = Color(0xffFF1E0F);
+const Color textBlue = Color(0xff0029FF);
