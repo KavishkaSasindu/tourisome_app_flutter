@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:tourism_app/home/cultural_page.dart";
 import "package:tourism_app/home/land_marks.dart";
 import "package:tourism_app/home/natural_wonders.dart";
 import "package:tourism_app/home/night_life.dart";
@@ -78,6 +79,7 @@ class HomePage extends StatelessWidget {
                 height: 10,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
                     child: const CategoryCard(
@@ -89,6 +91,18 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) => const LandMarks()));
+                    },
+                  ),
+                  GestureDetector(
+                    child: const CategoryCard(
+                        cardColor: mainLightBlue,
+                        categoryTitle: "Cultural",
+                        cardWidth: 190),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CulturalPage()));
                     },
                   ),
                 ],
