@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:tourism_app/home/book_page.dart";
 import "package:tourism_app/home/cultural_page.dart";
 import "package:tourism_app/home/land_marks.dart";
 import "package:tourism_app/home/natural_wonders.dart";
@@ -105,6 +106,25 @@ class HomePage extends StatelessWidget {
                               builder: (context) => const CulturalPage()));
                     },
                   ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Column(
+                children: [
+                  GestureDetector(
+                    child: const CategoryCard(
+                        cardColor: mainYellowColor,
+                        categoryTitle: "Book For A Ride Today!",
+                        cardWidth: 400),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const BookTour()));
+                    },
+                  )
                 ],
               )
             ]),
