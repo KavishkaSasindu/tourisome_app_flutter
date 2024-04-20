@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:tourism_app/reusable/book_page/book_card.dart";
 import "package:tourism_app/utils/color.dart";
+import "package:tourism_app/widgets/book_page/place_card.dart";
 
 class BookTour extends StatelessWidget {
   const BookTour({super.key});
@@ -25,7 +26,7 @@ class BookTour extends StatelessWidget {
       ),
       body: const SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -36,7 +37,10 @@ class BookTour extends StatelessWidget {
               ),
               Text(
                 "Select a Vehicle",
-                style: TextStyle(color: mainPurpleColor, fontSize: 20),
+                style: TextStyle(
+                    color: mainPurpleColor,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 10,
@@ -57,7 +61,21 @@ class BookTour extends StatelessWidget {
                     imageName: "Mask group-2.png",
                   ),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Selected Place",
+                style: TextStyle(
+                    color: mainPurpleColor,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              PlaceCard(),
             ],
           ),
         ),

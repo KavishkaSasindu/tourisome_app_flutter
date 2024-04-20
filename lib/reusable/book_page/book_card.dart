@@ -13,7 +13,15 @@ class BookCard extends StatelessWidget {
       elevation: 0,
       child: Column(
         children: [
-          Image.asset("assets/$imageName"),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              "assets/$imageName",
+              width: 115,
+              height: 115,
+              fit: BoxFit.cover,
+            ),
+          ),
           Text(
             vehicleName,
             style: const TextStyle(
