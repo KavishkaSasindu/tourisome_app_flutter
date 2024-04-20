@@ -1,4 +1,8 @@
 import "package:flutter/material.dart";
+import "package:flutter/widgets.dart";
+import "package:tourism_app/shared/button.dart";
+import "package:tourism_app/shared/input_card.dart";
+import "package:tourism_app/shared/rating_card.dart";
 import "package:tourism_app/utils/color.dart";
 
 class CulturalPage extends StatelessWidget {
@@ -57,6 +61,46 @@ class CulturalPage extends StatelessWidget {
                   "Rate This App",
                   style: TextStyle(color: lightBrown, fontSize: 20),
                 ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const RatingCard(),
+              const SizedBox(
+                height: 10,
+              ),
+              const Center(
+                child: Text(
+                  "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Center(
+                child: Text(
+                  "Send Feedback",
+                  style: TextStyle(
+                      color: lightBrown,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const InputBoxField(),
+              const SizedBox(
+                height: 10,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  ButtonBox(
+                    buttonValue: "Submit",
+                  ),
+                ],
               )
             ],
           ),
