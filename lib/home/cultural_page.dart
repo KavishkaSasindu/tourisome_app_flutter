@@ -20,6 +20,48 @@ class CulturalPage extends StatelessWidget {
               color: textRed, fontSize: 32, fontWeight: FontWeight.w500),
         ),
       ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Text(
+                "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                style: TextStyle(color: mainTextColor),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(
+                  "assets/Cultural.png",
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Center(
+                child: Text(
+                  "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Center(
+                child: Text(
+                  "Rate This App",
+                  style: TextStyle(color: lightBrown, fontSize: 20),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
